@@ -1,0 +1,10 @@
+def build(bld):
+    bld.program(
+            source = 'main.c money.c',
+            target = 'main',
+            )
+
+    bld.shlib(
+            source = 'money.c',
+            target = 'money',
+            )

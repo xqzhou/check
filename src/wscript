@@ -1,0 +1,10 @@
+def build(bld):
+    bld.shlib(
+            source = 'check.c check_error.c check_list.c check_log.c check_msg.c check_pack.c check_print.c check_run.c check_str.c',
+            target = 'check',
+            includes = '.. ../src',
+            defines = ['HAVE_CONFIG_H'],
+            install_path = '${PREFIX}/lib'
+            )
+
+    bld.install_files('${PREFIX}/include', ['check.h'])
